@@ -16,8 +16,9 @@
           
         
       </div>
-      <div class="d-flex w-100 position-relative  " style="height: 120px">
+      <div class="d-flex w-100 position-relative  " style="height: 250px">
           <div id="logo" class="flex-col logo position-absolute start-50">
+            <img src="https://img.upanh.tv/2022/10/03/Screenshot-2022-10-03-223840.png" alt="Screenshot-2022-10-03-223840.png">
             <!-- Header logo -->
             <a href="" title="" rel="home">
               <img src="https://www.canva.com/design/DAFN4iYtPE4/QFRAkf2syaYINFPcEMmPnw/edit?utm_content=DAFN4iYtPE4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="header-logo" alt="">
@@ -26,7 +27,7 @@
       </div>
       <div class="d-flex w-100 position-relative ">
         <div class=" " style=" padding-left: 80px">
-          <img src="http://hstatic.net/152/1000115152/1000160147/slideshow_5.jpg?v=301" alt="">
+          <img id ="img" src="http://hstatic.net/152/1000115152/1000160147/slideshow_5.jpg?v=301" alt="">
         </div>
       </div>
       <div class=" row bg-light">
@@ -329,7 +330,7 @@
                   <div class="row" id="row-1453526420">
                     <div class="col medium-3 ">
                       <div class="col-inner">
-                       <p style="text-align: center;"><img class="alignnone  wp-image-774" src="https://hienmautinhnguyen.org/wp-content/uploads/2021/10/LOGO-DOC-1-253x300.png" alt="cộng đồng hiến máu việt nam" width="136" height="161"></p>
+                       <p style="text-align: center;"><img class="alignnone  wp-image-774" src="https://img.upanh.tv/2022/10/03/Screenshot-2022-10-03-223840.png" alt="Screenshot-2022-10-03-223840.png"  ></p>
                       </div>
                      </div>
                     <div class="col medium-9 "><div class="col-inner">

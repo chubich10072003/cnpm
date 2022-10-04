@@ -79,6 +79,15 @@
                     <option selected> Nhóm máu O</option>
                   </select>
                 </div>
+                <div class="d-flex justify-content-between m-4 w-70 ">
+                    <p class="col-3 d-block "> kết quả kiểm nghiệm chất lượng máu:</p>
+                  <div class="d-flex col ">
+                  <input type="radio" id="dattieuchuan" value="Male" v-model="picked2" name="radio" />
+                    <label for="male">Đạt tiêu chuẩn</label>
+                    <input type="radio" id="chuadattieuchuan" value="Female" v-model="picked2" name="radio"/>
+                    <label for="female">Chưa đạt tiêu chuẩn</label>
+                  </div>
+                </div>
                  <div class="btn" @click="showData = !showData" style="background-color: #ff8200">
                    <span class="text-white">Show data</span>
                   </div>
@@ -384,6 +393,7 @@
   import { ref} from 'vue'
 export default {
   setup (){
+
       const xemData = ref()
       const showData = ref()
       const showData1 = ref()
@@ -400,6 +410,7 @@ export default {
       const picked1 = ref()
       const Heathl =ref()
       const Heathl1 =ref()
+      const picked2 = ref()
       return{
         province,
         text,
@@ -417,6 +428,7 @@ export default {
         picked1,
         text1,
         Heathl1,
+        picked2,
 
       }
     }

@@ -1,6 +1,7 @@
 <template>
   <div class="app d-flex ">
     <div class=" w-100  ">
+      <!--Header-->
       <div class="d-flex w-100 bg-secondary justify-content-between ps-4 " style="height: 54px">
         <div class="d-flex col-6 p-3">
           <span class="text-white text-align-center">Hiến máu cứu người - Một nghĩ cử cao đẹp. Hãy cùng giọt máu Việt cứu sống con người Việt Nam</span>
@@ -13,224 +14,136 @@
             <span>Đăng nhập</span>
           </a>
 	      </div>
-          
-        
       </div>
+      <!-- Header logo -->
       <div class="d-flex w-100 position-relative  " style="height: 250px">
-          <div id="logo" class="flex-col logo position-absolute start-50">
-            <img src="https://img.upanh.tv/2022/10/03/Screenshot-2022-10-03-223840.png" alt="Screenshot-2022-10-03-223840.png">
-            <!-- Header logo -->
-            <a href="" title="" rel="home">
-              <img src="https://www.canva.com/design/DAFN4iYtPE4/QFRAkf2syaYINFPcEMmPnw/edit?utm_content=DAFN4iYtPE4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="header-logo" alt="">
-            </a>
-          </div>
+        <div id="logo" class="flex-col logo position-absolute start-50">
+          <img src="https://img.upanh.tv/2022/10/03/Screenshot-2022-10-03-223840.png" alt="Screenshot-2022-10-03-223840.png">
+          <a href="" title="" rel="home">
+            <img src="https://www.canva.com/design/DAFN4iYtPE4/QFRAkf2syaYINFPcEMmPnw/edit?utm_content=DAFN4iYtPE4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="header-logo" alt="">
+          </a>
+        </div>
       </div>
+      <!--img body-->
       <div class="d-flex w-100 position-relative ">
         <div class=" " style=" padding-left: 80px">
           <img id ="img" src="http://hstatic.net/152/1000115152/1000160147/slideshow_5.jpg?v=301" alt="">
         </div>
       </div>
+      <!--Body1-->
       <div class=" row bg-light">
         <div class="d-flex">
           <div class=" bg-white " style="width: 700px; margin: 36px;">
             <div class="text-center p-2">
               <h4 >Thông tin người hiến máu</h4>
             </div>
-            <div class="d-flex">
-              <form class="w-100">
-                <div class="w-80 px-5 " >
-                  <div class="d-flex justify-content-between m-4 w-70 " >
-                    <lable for=" inputFirstname" class="col-3 d-block  " >
-                      <p>Tên:</p>
-                     </lable>
-                     <input type="inputFirstname " class="col form-control " v-model="firstName" id="inputFirstname" placeholder="name@example.com" >
-                    </div>
-                  <div class="d-flex justify-content-between m-4 w-70 " >
-                    <label for="inputLastname" class="col-3 d-block " >
-                      <p>Họ:</p>
-                    </label>
-                    <input type="inputLastname" class="col form-control" v-model="lastName" id="inputLastname" placeholder="name@example.com">
+            <div class=" w-100" style="height: 220px ">
+              <div class="d-flex ps-2 pt-3">
+                <div class="col-3"><img src="https://img.upanh.tv/2022/10/06/Screenshot-2022-10-06-001712.png" alt="Screenshot-2022-10-06-001712.png" ></div>
+                <div class="col">
+                  <h5>Ngọc Bích A, nhóm máu O</h5>
+                  <span>Đã xác minh chất lượng nhóm máu đạt tiêu chuẩn</span>
+                  <div class="py-2">
+                    <button class=" rounded" @click="dataUser1 = !dataUser1" style="background-color: #ff4500">
+                      <span class="text-white">Xem thông tin User1</span>
+                    </button>
                   </div>
-                  <div class="d-flex justify-content-between m-4 w-70 ">
-                    <label for="inputAddress" class="col-3 d-block ">Address:</label>
-                    <input type="inputAddress" class="col form-control" v-model="Address" id="inputAddress" placeholder="name@example.com">
+                    <div v-show="dataUser1">
+                      <div>Họ và tên: Chu Thị Ngọc Bích </div>
+                      <div>Nhóm máu: 0</div>
+                      <div>Giới tính: Nữ </div>
+                      <div>Địa Chỉ: Phường Thịnh Quang, Quận Đống Đa, Hà Nội</div>
                   </div>
-                  <div class="d-flex justify-content-between m-4 w-70 ">
-                    <label for="inputHeathl" class="col-3 d-block ">Tình trạng sức khỏe:</label>
-                    <input type="inputHeathl" class="col form-control" v-model="Heathl" id="inputHeathl" placeholder="name@example.com">
-                  </div>
-                  <div class="d-flex justify-content-between m-4 w-70 ">
-                    <p class="col-3 d-block ">Giới Tính:</p>
-                  <div class="d-flex col ">
-                  <input type="radio" id="male" value="Male" v-model="picked" name="radio" />
-                    <label for="male">Nam</label>
-                    <input type="radio" id="female" value="Female" v-model="picked" name="radio"/>
-                    <label for="female">Nữ</label>
-                  </div>
-                </div>
-                <div class="d-flex justify-content-between m-4 w-70 ">
-                  <div class="col-3 d-block">
-                    <p>Nhóm máu:</p>
-                   </div>
-                  <select class="form-select d-flex col" aria-label="Default select example" placeholder="Choix de la filiale" v-model="text">
-                    <option selected>Nhóm máu A</option>
-                    <option selected>Nhóm máu B</option>
-                    <option selected>Nhóm máu AB</option>
-                    <option selected> Nhóm máu O</option>
-                  </select>
-                </div>
-                <div class="d-flex justify-content-between m-4 w-70 ">
-                    <p class="col-3 d-block "> kết quả kiểm nghiệm chất lượng máu:</p>
-                  <div class="d-flex col ">
-                  <input type="radio" id="dattieuchuan" value="Male" v-model="picked2" name="radio" />
-                    <label for="male">Đạt tiêu chuẩn</label>
-                    <input type="radio" id="chuadattieuchuan" value="Female" v-model="picked2" name="radio"/>
-                    <label for="female">Chưa đạt tiêu chuẩn</label>
-                  </div>
-                </div>
-                 <div class="btn" @click="showData = !showData" style="background-color: #ff8200">
-                   <span class="text-white">Show data</span>
-                  </div>
-                 <div class="rounded border mt-4 " v-show="showData">
-                 <div class="d-flex border-bottom">
-                 <div class="col-3 border-end">
-                  <span>Tên</span>
-                 </div>
-                 <div>
-                 {{ firstName }}
-                </div>
-                </div>
-                <div class="d-flex border-bottom">
-                <div class="col-3 border-end">
-                  <span>Họ</span>
-                </div>
-                <div>{{ lastName }}</div>
-                </div>
-                <div class="d-flex border-bottom ">
-                <div class="col-3 border-end">
-                 <span>Địa chỉ </span>
-                </div>
-                <div>{{ Address }}</div>
-                </div>
-                <div class="d-flex border-bottom ">
-                <div class="col-3 border-end">
-                 <span>Tình trạng sức khỏe </span>
-                </div>
-                <div>{{ Heathl }}</div>
-                </div>
-                <div class="d-flex border-bottom">
-                <div class="col-3 border-end">
-                 <span>Giới Tính</span>
-                 </div>
-                 <div>{{ picked }}</div>
-                </div>
-                <div class="d-flex border-bottom">
-                <div class="col-3 border-end">
-                 <span>Nhóm máu</span>
-                </div>
-                <div>{{ text }}</div>
                 </div>
               </div>
+            </div>
+            <div class=" w-100" style="height: 220px ">
+              <div class="d-flex ps-2 pt-3">
+                <div class="col-3"><img src="https://img.upanh.tv/2022/10/06/Screenshot-2022-10-06-010703.png" alt="Screenshot-2022-10-06-010703.png"></div>
+                <div class="col">
+                  <h5>Ngọc Bích B, nhóm máu AB</h5>
+                  <span>Đã xác minh chất lượng nhóm máu đạt tiêu chuẩn</span>
+                  <div class="py-2">
+                    <button class=" rounded" @click="dataUser2 = !dataUser2" style="background-color: #ff4500">
+                      <span class="text-white">Xem thông tin User2</span>
+                    </button>
+                  </div>
+                    <div v-show="dataUser2">
+                      <div>Họ và tên: Chu Thị Ngọc Bích B</div>
+                      <div>Nhóm máu: AB</div>
+                      <div>Giới tính: Nữ </div>
+                      <div>Địa Chỉ: Phường Thịnh Quang, Quận Đống Đa, Hà Nội</div>
+                  </div>
+                </div>
               </div>
-              </form>
+            </div>
+            <div class=" w-100" style="height: 220px ">
+              <div class="d-flex ps-2 pt-3">
+                <div class="col-3"><img src="https://img.upanh.tv/2022/10/06/Screenshot-2022-10-06-011926.png" alt="Screenshot-2022-10-06-011926.png"></div>
+                <div class="col">
+                  <h5>Ngọc Bích C, nhóm máu A</h5>
+                  <span>Đã xác minh chất lượng nhóm máu đạt tiêu chuẩn</span>
+                  <div class="py-2">
+                    <button class=" rounded" @click="dataUser3 = !dataUser3" style="background-color: #ff4500">
+                      <span class="text-white">Xem thông tin User2</span>
+                    </button>
+                  </div>
+                    <div v-show="dataUser3">
+                      <div>Họ và tên: Chu Thị Ngọc Bích C</div>
+                      <div>Nhóm máu: A</div>
+                      <div>Giới tính: Nữ </div>
+                      <div>Địa Chỉ: Phường Thịnh Quang, Quận Đống Đa, Hà Nội</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class=" bg-white " style="width: 700px; margin: 36px;">
             <div class="text-center p-2">
               <h4 >Thông tin người nhận máu máu</h4>
             </div>
-            <div class="d-flex">
-              <form class="w-100">
-                <div class="w-80 px-5 " >
-                  <div class="d-flex justify-content-between m-4 w-70 " >
-                    <lable for=" inputFirstname1" class="col-3 d-block  " >
-                      <p>Tên:</p>
-                     </lable>
-                     <input type="inputFirstname1 " class="col form-control " v-model="firstName1" id="inputFirstname1" placeholder="name@example.com" >
-                    </div>
-                  <div class="d-flex justify-content-between m-4 w-70 " >
-                    <label for="inputLastname1" class="col-3 d-block " >
-                      <p>Họ:</p>
-                    </label>
-                    <input type="inputLastname1" class="col form-control" v-model="lastName1" id="inputLastname1" placeholder="name@example.com">
+            <div class=" w-100" style="height: 220px ">
+              <div class="d-flex ps-2 pt-3">
+                <div class="col-3"><img src="https://img.upanh.tv/2022/10/06/Screenshot-2022-10-06-013932.png" alt="Screenshot-2022-10-06-013932.png" ></div>
+                <div class="col">
+                  <h5>Thanh Tùng, nhóm máu B</h5>
+                  <div class="py-2">
+                    <button class=" rounded" @click="dataUser4 = !dataUser4" style="background-color: #ff4500">
+                      <span class="text-white">Xem thông tin Bệnh Nhân</span>
+                    </button>
                   </div>
-                  <div class="d-flex justify-content-between m-4 w-70 ">
-                    <label for="inputAddress1" class="col-3 d-block ">Address:</label>
-                    <input type="inputAddress1" class="col form-control" v-model="Address1" id="inputAddress1" placeholder="name@example.com">
+                    <div v-show="dataUser4">
+                      <div>Họ và tên: Nguyễn Thanh Tùng</div>
+                      <div>Nhóm máu: B</div>
+                      <div>Giới tính: Nam </div>
+                      <div>Địa Chỉ: Phường Ngã Tư Sở, Quận Đống Đa, Hà Nội</div>
                   </div>
-                  <div class="d-flex justify-content-between m-4 w-70 ">
-                    <label for="inputHeathl1" class="col-3 d-block ">Tình trạng sức khỏe:</label>
-                    <input type="inputHeathl1" class="col form-control" v-model="Heathl1" id="inputHeathl1" placeholder="name@example.com">
-                  </div>
-                  <div class="d-flex justify-content-between m-4 w-70 ">
-                    <p class="col-3 d-block ">Giới Tính:</p>
-                  <div class="d-flex col ">
-                  <input type="radio" id="male" value="Male" v-model="picked1" name="radio" />
-                    <label for="male">Nam</label>
-                    <input type="radio" id="female" value="Female" v-model="picked1" name="radio"/>
-                    <label for="female">Nữ</label>
-                  </div>
-                </div>
-                <div class="d-flex justify-content-between m-4 w-70 ">
-                  <div class="col-3 d-block">
-                    <p>Nhóm máu:</p>
-                   </div>
-                  <select class="form-select d-flex col" aria-label="Default select example" placeholder="Choix de la filiale" v-model="text1">
-                    <option selected>Nhóm máu A</option>
-                    <option selected>Nhóm máu B</option>
-                    <option selected>Nhóm máu AB</option>
-                    <option selected> Nhóm máu O</option>
-                  </select>
-                </div>
-                 <div class="btn" @click="showData1 = !showData1" style="background-color: #ff8200">
-                   <span class="text-white">Show data</span>
-                  </div>
-                 <div class="rounded border mt-4 " v-show="showData1">
-                 <div class="d-flex border-bottom">
-                 <div class="col-3 border-end">
-                  <span>Tên</span>
-                 </div>
-                 <div>
-                 {{ firstName1 }}
-                </div>
-                </div>
-                <div class="d-flex border-bottom">
-                <div class="col-3 border-end">
-                  <span>Họ</span>
-                </div>
-                <div>{{ lastName1 }}</div>
-                </div>
-                <div class="d-flex border-bottom ">
-                <div class="col-3 border-end">
-                 <span>Địa chỉ </span>
-                </div>
-                <div>{{ Address1 }}</div>
-                </div>
-                <div class="d-flex border-bottom ">
-                <div class="col-3 border-end">
-                 <span>Tình trạng sức khỏe </span>
-                </div>
-                <div>{{ Heathl1 }}</div>
-                </div>
-                <div class="d-flex border-bottom">
-                <div class="col-3 border-end">
-                 <span>Giới Tính</span>
-                 </div>
-                 <div>{{ picked1 }}</div>
-                </div>
-                <div class="d-flex border-bottom">
-                <div class="col-3 border-end">
-                 <span>Nhóm máu</span>
-                </div>
-                <div>{{ text1 }}</div>
                 </div>
               </div>
+            </div>
+            <div class=" w-100" style="height: 220px ">
+              <div class="d-flex ps-2 pt-3">
+                <div class="col-3"><img src="https://img.upanh.tv/2022/10/06/Screenshot-2022-10-06-014651.png" alt="Screenshot-2022-10-06-014651.png"></div>
+                <div class="col">
+                  <h5>Sơn Tùng, nhóm máu A</h5>
+                  <div class="py-2">
+                    <button class=" rounded" @click="dataUser5 = !dataUser5" style="background-color: #ff4500">
+                      <span class="text-white">Xem thông tin Bệnh nhân</span>
+                    </button>
+                  </div>
+                    <div v-show="dataUser5">
+                      <div>Họ và tên: Nguyễn Thanh Sơn Tùng</div>
+                      <div>Nhóm máu: A</div>
+                      <div>Giới tính: Nam</div>
+                      <div>Địa Chỉ: Phường Thịnh Liệt, Quận Đống Đa, Hà Nội</div>
+                  </div>
+                </div>
               </div>
-              </form>
             </div>
           </div>
         </div>
       </div>
+      <!--Body2-->
       <div class=" w-100 bg-light justify-content-between">
         <div class="row d-flex p-5" >
           <div class=" bg-white" style="width: 1000px ">
@@ -257,7 +170,6 @@
                 <span>Miền Nam</span>
               </div>
               <div>
-             
             </div>
           </div>
           <div class="d-flex border-bottom">
@@ -327,7 +239,8 @@
             </div>
         </div>
       </div>
-        </div>
+      </div>
+      
       <footer id="footer" class="footer-wrapper">
         <section class="section" id="section_351516950">
           <div class="bg section-bg fill bg-fill bg-loaded">
@@ -384,7 +297,7 @@
       </div><!-- .container -->
       </div><!-- .absolute-footer -->
         <a href="#top" class="back-to-top button icon invert plain fixed bottom z-1 is-outline hide-for-medium circle active" id="top-link"><i class="icon-angle-up"></i></a>
-    </footer>
+      </footer>
     </div>
   </div>
   
@@ -394,41 +307,20 @@
 export default {
   setup (){
 
-      const xemData = ref()
-      const showData = ref()
-      const showData1 = ref()
-      const province = ref()
-      const firstName = ref()
-      const firstName1 = ref()
-      const lastName=  ref()
-      const lastName1=  ref()
-      const text = ref()
-      const text1 = ref()
-      const Address = ref()
-      const Address1 = ref()
-      const picked = ref()
-      const picked1 = ref()
-      const Heathl =ref()
-      const Heathl1 =ref()
-      const picked2 = ref()
+    const xemData = ref()
+    const dataUser1 = ref()
+    const dataUser2 = ref()
+    const dataUser3 = ref()
+    const dataUser4 = ref()
+    const dataUser5 = ref()
       return{
-        province,
-        text,
-        firstName, 
-        lastName,
-        Address, 
-        picked, 
-        showData,
-        showData1,
+        
+        dataUser1,
+        dataUser2,
+        dataUser3,
+        dataUser4,
+        dataUser5,
         xemData,
-        Heathl,
-        firstName1,
-        lastName1,
-        Address1, 
-        picked1,
-        text1,
-        Heathl1,
-        picked2,
 
       }
     }

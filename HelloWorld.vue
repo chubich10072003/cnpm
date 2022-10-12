@@ -144,9 +144,9 @@
         </div>
       </div>
       <!--Body2-->
-      <div class=" w-100 bg-light justify-content-between">
+      <div class=" w-100 bg-light justify-content-between px-5 pb-5">
         <div class="row d-flex p-5" >
-          <div class=" bg-white" style="width: 1000px ">
+          <div class=" bg-white" style="height: 400px">
           <div class="text-center col-inner " style="padding:0px 0px 0px 7px;">
             <div class="pt-2">
               <h5>DANH SÁCH ĐỊA ĐIỂM TRUYỀN MÁU </h5>
@@ -230,17 +230,57 @@
         </div>
           </div>
         </div>
-        <div class=" bg-white ms-4" style="max-width: 420px">
-          <div>
-            <span>Mã QR </span>
+        </div>
+        
+        </div>
+      <!--Body3-->
+      <div class=" d-flex w-100 bg-white" style="height: 600px">
+        <div style="width: 700px">
+          <div class=" p-4">
+          <h4>Thông tin các ca hiến máu</h4>
           </div>
+          <div style="height: 200px">
+          <div style="width: 600px;">
+            <button class="" @click="dataUserBN1 = !dataUserBN1" style="background-color: white; width: 250px; border: white;">
+              <h6 class="">Xem thông tin ca hiến máu S1</h6>
+            </button>
+          </div>
+          <div v-show="dataUserBN1">
             <div>
-            <img src="https://anhong.com.vn/wp-content/uploads/2020/09/ma-qrcode-https-baohodoanhnghiep-com.png" alt="anhqr" class="">
+              <div>Người hiến máu: Chu Thị Ngọc Bích B</div>
+              <div>Người nhận Máu: Nguyễn Thanh Sơn Tùng </div>
+              <div>Nhóm máu: AB</div>
+              <div>Thời gian thực hiện truyền máu: 11 giờ 11 phút ngày 11 tháng 10 năm 2022</div>
+              <div>Nơi thực hiện truyền máu: Bệnh viện Bạch Mai</div>
             </div>
+          </div>
+          </div>
+          <div style="width: 500px">
+            <button class="" @click="dataUserBN2 = !dataUserBN2" style="background-color: white; width: 250px; border: white;">
+              <h6 class="">Xem thông tin ca hiến máu S2</h6>
+            </button>
+          </div>
+          <div v-show="dataUserBN2">
+            <div>
+              <div>Người hiến máu: Chu Thị Ngọc Bích </div>
+              <div>Người nhận Máu: Nguyễn Thanh Tùng </div>
+              <div>Nhóm máu: O</div>
+              <div>Thời gian thực hiện truyền máu: 18 giờ 33 phút ngày 11 tháng 10 năm 2022</div>
+              <div>Nơi thực hiện truyền máu: Bệnh viện Bạch Mai</div>
+            </div>
+          </div>
+          </div>
+      
+
+        <div class=" d-flex bg-white p-5 " style="width: 700px" >
+          <div class="text-center">
+            <h4>Quỹ ủng hộ</h4>
+          </div>
+          <div>
+            <img src="https://store.cubemars.com/erweima_png.php?id=1030" alt="">
+          </div>
         </div>
       </div>
-      </div>
-      
       <footer id="footer" class="footer-wrapper">
         <section class="section" id="section_351516950">
           <div class="bg section-bg fill bg-fill bg-loaded">
@@ -306,7 +346,8 @@
   import { ref} from 'vue'
 export default {
   setup (){
-
+    const dataUserBN2 = ref()
+    const dataUserBN1 = ref()
     const xemData = ref()
     const dataUser1 = ref()
     const dataUser2 = ref()
@@ -314,7 +355,8 @@ export default {
     const dataUser4 = ref()
     const dataUser5 = ref()
       return{
-        
+        dataUserBN1,
+        dataUserBN2,
         dataUser1,
         dataUser2,
         dataUser3,
